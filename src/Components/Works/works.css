@@ -1,0 +1,88 @@
+#works {
+  margin: 0 auto;
+  min-height: calc(100vh - 4rem);
+  width: 100vw;
+  max-width: 60rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+.what {
+  color: yellow;
+  font-size: 21px;
+  font-weight: 600;
+  padding: 15px;
+}
+
+.workstitle {
+  margin: 1rem 0;
+  font-size: 3rem;
+}
+
+.worksDesc {
+  font-weight: 300;
+  font-size: 1rem;
+  max-width: 45rem;
+}
+
+.worksImgs {
+  align-items: center;
+  justify-content: center;
+  max-width: 65rem;
+  flex-wrap: nowrap;
+  margin: 1.5rem 0;
+  background-color: #1e1e1e;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  height: 75vh;
+  width: 20vw;
+  border: 2px solid yellow;
+}
+
+.worksImg {
+  object-fit: contain;
+  height: 60vh;
+  width: 100%;
+  padding: 3.5px 2px;
+  margin: auto;
+}
+
+.workBtn {
+  padding: 0.5rem 2.5rem;
+  border: none;
+  border-radius: 20px;
+  background: rgb(0, 30, 255);
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.workBtn:hover {
+  color: black;
+  background-color: white;
+  outline: none;
+  border: none;
+}
+.workBtn:hover:focus {
+  color: black;
+  background: rgb(0, 30, 255);
+  outline: none;
+  border: none;
+}
+
+@media screen and (max-width: 585px) {
+  .worksImg {
+    height: 48vh;
+    width: 100%;
+  }
+
+  .worksImgs {
+    height: 80vh;
+    width: 90%;
+    max-width: 60rem;
+    border: 1.5px solid yellow;
+  }
+}

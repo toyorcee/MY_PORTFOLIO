@@ -1,0 +1,165 @@
+#intro {
+  min-height: calc(100vh - 5rem);
+  width: 100vw;
+  max-width: 75rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: -4rem;
+  right: 0;
+  z-index: -1;
+  object-fit: cover;
+  height: 100vh;
+}
+
+.introContent {
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hello {
+  font-size: 1.75rem;
+  font-weight: 100;
+}
+
+.introName {
+  color: yellow;
+}
+
+.introPara {
+  font-size: medium;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.btn {
+  background: white;
+  margin: 1rem 0;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: black;
+  background: yellow;
+}
+
+.btnhire {
+  object-fit: cover;
+  height: 1rem;
+  width: 1rem;
+  margin: 0 0.25rem;
+  padding: 0 2px;
+  color: black;
+}
+
+.hiire{
+  color: black;
+}
+
+@media screen and (max-width: 840px) and (min-width: 769px) {
+  /* .bg {
+    right: -5vw;
+  } */
+  .introContent {
+    font-size: 7vw;
+  }
+  .hello {
+    font-size: 4.5vw;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 482px) {
+  .introContent {
+    font-size: 7vw;
+    padding-top: 50px;
+  }
+  .btn {
+    background: white;
+    margin: 1rem 0;
+    padding: 8px 10px;
+    border-radius: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) and (min-width: 424px) {
+  .bg {
+    right: 0vw;
+    top: 0;
+  }
+  .introContent {
+    font-size: 8vw;
+    padding-top: 50px;
+  }
+  .hello {
+    font-size: 20px;
+  }
+  .btn {
+    background: white;
+    margin: 1rem 0;
+    padding: 7px 10px;
+    border-radius: 1rem;
+  }
+  .btnhire {
+    object-fit: cover;
+    height: 14px;
+    width: 14px;
+  }
+}
+@media screen and (max-width: 425px) and (min-width: 376px) {
+  .introContent {
+    font-size: 7vw;
+    padding-top: 100px;
+  }
+  .btn {
+    background: white;
+    margin: 1rem 0;
+    padding: 7px 9px;
+    border-radius: 1rem;
+  }
+}
+
+@media screen and (max-width: 375px) and (min-width: 321px) {
+  .introContent {
+    font-size: 9vw;
+    padding-top: 20px;
+  }
+  .btn {
+    background: white;
+    margin: 1rem 0;
+    padding: 6px 9px;
+    border-radius: 1rem;
+  }
+}
+@media screen and (max-width: 320px) and (min-width: 1px) {
+  .introContent {
+    font-size: 5vw;
+    padding-top: 150px;
+  }
+  .bg {
+    margin-top: 2rem;
+  }
+  .btn {
+    background: white;
+    margin: 1rem 0;
+    padding: 6px 9px;
+    border-radius: 1rem;
+  }
+  .btnhire {
+    object-fit: cover;
+    height: 10px;
+    width: 10px;
+  }
+}
