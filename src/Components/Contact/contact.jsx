@@ -10,6 +10,8 @@ import twittericon from "../../asset/twitter.png";
 import youtubeicon from "../../asset/youtube.png";
 import emailjs from "@emailjs/browser";
 import { Container, Button, Form } from "react-bootstrap";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variants.js";
 
 const Contact = () => {
   const [fields, setFields] = useState({});
@@ -71,7 +73,7 @@ const Contact = () => {
   const cancelCourse = () => {
     document.getElementById("cancel").reset();
   };
-  
+
   const sendEmail = (e) => {
     e.preventDefault();
     if (handleValidation()) {
@@ -107,72 +109,113 @@ const Contact = () => {
             i have worked with include
           </p>
           <div className="clientImgs">
-            <img src={Walmart} alt="Clients" className="clientImg" />
-            <img src={Adobe} alt="Clients" className="clientImg" />
-            <img src={Microsoft} alt="Clients" className="clientImg" />
-            <img src={Facebook} alt="Clients" className="clientImg" />
+            <motion.div
+              className="md:w-full mx-auto py-8 rounded mb-32"
+              variants={fadeIn("left", 0.3)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.5 }}
+            >
+              <img src={Walmart} alt="Clients" className="clientImg" />
+            </motion.div>
+            <motion.div
+              className="md:w-full mx-auto py-8 rounded mb-32"
+              variants={fadeIn("right", 0.3)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.5 }}
+            >
+              <img src={Adobe} alt="Clients" className="clientImg" />
+            </motion.div>
+            <motion.div
+              className="md:w-full mx-auto py-8 rounded mb-32"
+              variants={fadeIn("left", 0.3)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.5 }}
+            >
+              <img src={Microsoft} alt="Clients" className="clientImg" />
+            </motion.div>
+            <motion.div
+              className="md:w-full mx-auto py-8 rounded mb-32"
+              variants={fadeIn("right", 0.3)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.5 }}
+            >
+              <img src={Facebook} alt="Clients" className="clientImg" />
+            </motion.div>
           </div>
         </div>
         <div id="contact">
           <h1 className="contactPageTitle">Contact Me</h1>
           <span className="contactDesc">
-            Please fill out the form below to discuss any work opportunities.
+            Please fill out the form below to discuss any work opportunities. I
+            will get back to you outside working hours.
           </span>
-          <Form
-            className="contactForm"
-            ref={form}
-            onSubmit={sendEmail}
-            id="cancel"
+          <motion.div
+            className="md:w-full mx-auto py-8 rounded mb-32"
+            variants={fadeIn("down", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.5 }}
           >
-            <Form.Group className="mb-3">
-              <Form.Label>First Name</Form.Label>
-              <Form.Control
-                type="text"
-                className="name"
-                placeholder="Your first Name"
-                name="name"
-                onChange={(e) => handleChange("name", e.target.value)}
-                value={fields["name"]}
-              />
-              <span className="error">{errors["name"]}</span>
-            </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control
-                type="email"
-                className="email"
-                placeholder="Your Email"
-                name="your_email"
-                onChange={(e) => handleChange("email", e.target.value)}
-                value={fields["email"]}
-              />
-              <span className="error">{errors["email"]}</span>
-            </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label>Message</Form.Label>
-              <Form.Control
-                as="textarea"
-                rows={5}
-                className="msg"
-                placeholder="Your Message"
-                name="message"
-              />
-            </Form.Group>
-            <Button
-              type="submit"
-              className="submitBtn"
-              value="Send"
-              onClick={(e) => sendEmail(e)}
+            <Form
+              className="contactForm"
+              ref={form}
+              onSubmit={sendEmail}
+              id="cancel"
             >
-              Submit
-            </Button>
-            <div className="links">
-              <img src={Facebookicon} alt="facebook" className="link" />
-              <img src={instagramicon} alt="instagram" className="link" />
-              <img src={twittericon} alt="twitter" className="link" />
-              <img src={youtubeicon} alt="youtube" className="link" />
-            </div>
-          </Form>
+              <Form.Group className="mb-3">
+                <Form.Label>First Name</Form.Label>
+                <Form.Control
+                  type="text"
+                  className="name"
+                  placeholder="Your first Name"
+                  name="name"
+                  onChange={(e) => handleChange("name", e.target.value)}
+                  value={fields["name"]}
+                />
+                <span className="error">{errors["name"]}</span>
+              </Form.Group>
+              <Form.Group className="mb-3">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control
+                  type="email"
+                  className="email"
+                  placeholder="Your Email"
+                  name="your_email"
+                  onChange={(e) => handleChange("email", e.target.value)}
+                  value={fields["email"]}
+                />
+                <span className="error">{errors["email"]}</span>
+              </Form.Group>
+              <Form.Group className="mb-3">
+                <Form.Label>Message</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={5}
+                  className="msg"
+                  placeholder="Your Message"
+                  name="message"
+                />
+              </Form.Group>
+              <Button
+                type="submit"
+                className="submitBtn"
+                value="Send"
+                onClick={(e) => sendEmail(e)}
+              >
+                Submit
+              </Button>
+              <div className="links">
+                <img src={Facebookicon} alt="facebook" className="link" />
+                <img src={instagramicon} alt="instagram" className="link" />
+                <img src={twittericon} alt="twitter" className="link" />
+                <img src={youtubeicon} alt="youtube" className="link" />
+              </div>
+            </Form>
+          </motion.div>
         </div>
       </section>
     </Container>
