@@ -20,8 +20,7 @@ const Skills = () => {
         I am a skilled and passionate Developer with experience in creating
         visually appealing & user-friendly websites and Applications. I have a
         strong understanding of design & development and a keen eye for details.
-        I am proficient in HTML, CSS, JavaScript & Python as well as design
-        software such as Photoshop & CorelDraw.
+        I am proficient in HTML, CSS, JavaScript & Python.
       </span>
       <div className="skillBars">
         <div className="skillBar" id="allbg">
@@ -30,30 +29,33 @@ const Skills = () => {
             <h2 className="h2">Client-Side (Front-End) Development</h2>
             <p>
               I create user interfaces and design of websites using HTML for
-              structure, CSS for styling, and JavaScript for interactivity, &
-              also ensure that the website works well on various devices and
-              screen sizes with the help of REACT, REACT-BOOTSTRAP & TAILWIND.
+              structure, CSS for styling, JavaScript for interactivity, & also
+              ensure that the website works well on various devices and screen
+              sizes.
             </p>
           </div>
         </div>
         <div className="skillBar" id="djangobg">
           <img src={django} alt="django" className="skillBarImg" />
           <div className="skillBarText">
-            <h2 className="h2">Back-End Development</h2>
+            <h2 className="h2">Server-Side (Back-End) Development</h2>
             <p>
               I develop server-side logic using languages like Node.js
               (JavaScript), Python (Django) & also Interact with databases using
-              MySQLite.
+              Mongoose.
             </p>
           </div>
         </div>
         <div className="skillBar" id="apibg">
           <img src={api} alt="API" className="skillBarImg" />
           <div className="skillBarText">
-            <h2 className="h2">API (Application Programming Interface) Development</h2>
+            <h2 className="h2">
+              API (Application Programming Interface) Development
+            </h2>
             <p>
               I create & use APIs that allow communication between the front-end
-              and back-end, enabling data exchange and functionality.
+              and back-end, enabling data exchange and functionality using
+              express and JWT.
             </p>
           </div>
         </div>
@@ -63,8 +65,8 @@ const Skills = () => {
             <h2 className="h2">Server Management and Deployment</h2>
             <p>
               I configure and manage servers to host web applications, websites
-              & Deploy applications using platforms like DomainKing & other
-              cloud services.
+              & Deploy applications using platforms like Render, Netflify &
+              other cloud services.
             </p>
           </div>
         </div>
@@ -84,8 +86,7 @@ const Skills = () => {
             <h2 className="h2">Testing</h2>
             <p>
               I implement unit testing and integration testing to ensure the
-              reliability and functionality of both front-end and back-end code
-              using Vercel.
+              reliability and functionality of web applications.
             </p>
           </div>
         </div>

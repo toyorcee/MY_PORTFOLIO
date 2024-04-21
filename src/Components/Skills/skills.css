@@ -22,6 +22,7 @@
   font-weight: 300;
   max-width: 50rem;
   padding: 0 2rem;
+  margin: 7px 0px;
 }
 
 .h2 {
@@ -54,6 +55,7 @@
 .skillBarText > p {
   font-weight: 200;
   font-size: 0.9rem;
+  margin: 10px 0px;
 }
 
 @media screen and (max-width: 720px) {

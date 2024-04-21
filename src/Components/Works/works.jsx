@@ -8,6 +8,8 @@ import ecomm from "../../asset/ecomm.webp";
 import gallery04 from "../../asset/gallery04.png";
 import possibility from "../../asset/possibility.png";
 import shopper_img from "../../asset/smiling.webp";
+import womaneating from "../../assets/womaneating.jpg";
+
 
 const Works = () => {
   return (
@@ -23,6 +25,23 @@ const Works = () => {
         </span>
         <p className="what">What are you doing today?</p>
         <Row>
+          <Col md={4}>
+            <Card className="worksImgs">
+              <Card.Img src={womaneating} className="worksImg food-ordering" />
+              <Card.Body>
+                <Card.Title>Toyosi's Kitchen</Card.Title>
+                <Card.Text>
+                  <p>Responsive MERN Food-Ordering-App</p>
+                </Card.Text>
+                <a
+                  href="https://662177bf2253ce103788c1e8--gregarious-babka-8f0d6c.netlify.app/"
+                  target="blank_"
+                >
+                  <Button className="workBtn">More Details</Button>
+                </a>
+              </Card.Body>
+            </Card>
+          </Col>
           <Col md={4}>
             <Card className="worksImgs">
               <Card.Img src={shopper_img} className="worksImg" />
