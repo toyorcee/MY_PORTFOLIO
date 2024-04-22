@@ -53,7 +53,7 @@ const Works = () => {
                     <p>Responsive MERN Food-Ordering-App</p>
                   </Card.Text>
                   <a
-                    href="https://662177bf2253ce103788c1e8--gregarious-babka-8f0d6c.netlify.app/"
+                    href="https://toyorceeskitchen.netlify.app/"
                     target="blank_"
                   >
                     <Button className="workBtn">More Details</Button>
@@ -78,7 +78,7 @@ const Works = () => {
                     <p>Responsive MERN E-commerce App</p>
                   </Card.Text>
                   <a
-                    href="https://musical-jelly-ce4742.netlify.app/"
+                    href="https://toyorcee-shopper.netlify.app/"
                     target="blank_"
                   >
                     <Button className="workBtn">More Details</Button>
