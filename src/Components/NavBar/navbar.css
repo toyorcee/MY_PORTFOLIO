@@ -1,8 +1,8 @@
 .navbar {
   height: 5rem;
-  width: 87vw;
+  width: 90vw;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 1rem 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -101,5 +101,29 @@
   }
   .listItem{
     text-decoration: none;
+  }
+}
+@media screen and (max-width: 425px) {
+  .mobMenu {
+    display: flex;
+  }
+  .desktopMenu {
+    display: none;
+  }
+  .desktopMenuBtn {
+    display: none;
+  }
+  .listItem{
+    text-decoration: none;
+  }
+  .listItem:hover{
+    color: yellow;
+  }
+  .listItem:active{
+    color: yellow;
+  }
+  .navbar{
+    width: 100%;
+    margin-left: 10px;
   }
 }

@@ -22,8 +22,6 @@ const Intro = () => {
                 // Same substring at the start will only be typed out once, initially
                 "Full-Stack DEVELOPER",
                 1000, // wait 1s before replacing "Mice" with "Hamsters"
-                "I'm a skilled web developer",
-                1000, // wait 1s before replacing "Mice" with "Hamsters"
                 "Specialized in front-end",
                 1000,
                 "Specialized in back-end",
