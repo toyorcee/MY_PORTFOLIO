@@ -129,6 +129,9 @@
     padding: 7px 9px;
     border-radius: 1rem;
   }
+  .sequence{
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 375px) and (min-width: 321px) {
