@@ -37,6 +37,28 @@ const Works = () => {
           <Col md={4}>
             <motion.div
               className="md:w-full mx-auto py-8 rounded mb-32"
+              variants={fadeIn("left", 0.3)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.5 }}
+            >
+              <Card className="worksImgs">
+                <Card.Img src={ecomm} className="worksImg" />
+                <Card.Body>
+                  <Card.Title>E-commerce</Card.Title>
+                  <Card.Text>
+                    <p>Responsive E-commerce Web Application.</p>
+                  </Card.Text>
+                  <a href="https://ecommerce4-two.vercel.app/" target="blank_">
+                    <Button className="workBtn">More Details</Button>
+                  </a>
+                </Card.Body>
+              </Card>
+            </motion.div>
+          </Col>
+          <Col md={4}>
+            <motion.div
+              className="md:w-full mx-auto py-8 rounded mb-32"
               variants={fadeIn("right", 0.3)}
               initial="hidden"
               whileInView={"show"}
@@ -156,56 +178,6 @@ const Works = () => {
               </Card>
             </motion.div>
           </Col>
-          <Col md={4}>
-            <motion.div
-              className="md:w-full mx-auto py-8 rounded mb-32"
-              variants={fadeIn("left", 0.3)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.5 }}
-            >
-              <Card className="worksImgs">
-                <Card.Img src={ecomm} className="worksImg" />
-                <Card.Body>
-                  <Card.Title>E-commerce</Card.Title>
-                  <Card.Text>
-                    <p>Responsive E-commerce Web Application.</p>
-                  </Card.Text>
-                  <a href="https://ecommerce4-two.vercel.app/" target="blank_">
-                    <Button className="workBtn">More Details</Button>
-                  </a>
-                </Card.Body>
-              </Card>
-            </motion.div>
-          </Col>
-          {/* <Col md={4}>
-            <Card className="worksImgs">
-              <Card.Img src={work4} className="worksImg" />
-              <Card.Body>
-                <Card.Title>FoodApp</Card.Title>
-                <Card.Text>
-                  <p>Responsive FoodApp Web Application.</p>
-                </Card.Text>
-                <a href="https://toyorcular.vercel.app/" target="blank_">
-                  <Button className="workBtn">More Details</Button>
-                </a>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={4}>
-            <Card className="worksImgs">
-              <Card.Img src={work4} className="worksImg" />
-              <Card.Body>
-                <Card.Title>FoodApp</Card.Title>
-                <Card.Text>
-                  <p>Responsive FoodApp Web Application.</p>
-                </Card.Text>
-                <a href="https://toyorcular.vercel.app/" target="blank_">
-                  <Button className="workBtn">More Details</Button>
-                </a>
-              </Card.Body>
-            </Card>
-          </Col> */}
         </Row>
       </Container>
     </section>
