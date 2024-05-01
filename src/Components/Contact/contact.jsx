@@ -16,6 +16,7 @@ import { fadeIn } from "../../variants.js";
 const Contact = () => {
   const [fields, setFields] = useState({});
   const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleValidation = () => {
     const formFields = { ...fields };
@@ -76,6 +77,8 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsLoading(true);
+
     if (handleValidation()) {
       emailjs
         .sendForm(
@@ -87,8 +90,8 @@ const Contact = () => {
         .then(
           (result) => {
             console.log(result.text);
-            cancelCourse();
             alert("Email Sent");
+            cancelCourse();
           },
           (error) => {
             console.log(error.text);
@@ -175,6 +178,7 @@ const Contact = () => {
                   name="name"
                   onChange={(e) => handleChange("name", e.target.value)}
                   value={fields["name"]}
+                  id="cancel"
                 />
                 <span className="error">{errors["name"]}</span>
               </Form.Group>
@@ -187,6 +191,7 @@ const Contact = () => {
                   name="your_email"
                   onChange={(e) => handleChange("email", e.target.value)}
                   value={fields["email"]}
+                  id="cancel"
                 />
                 <span className="error">{errors["email"]}</span>
               </Form.Group>
@@ -202,11 +207,13 @@ const Contact = () => {
               </Form.Group>
               <Button
                 type="submit"
+                disabled={isLoading}
                 className="submitBtn"
                 value="Send"
                 onClick={(e) => sendEmail(e)}
+                id="cancel"
               >
-                Submit
+                {isLoading ? "loading..." : "Submit"}
               </Button>
               <div className="links">
                 <img src={Facebookicon} alt="facebook" className="link" />
