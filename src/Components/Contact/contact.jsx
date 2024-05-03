@@ -91,6 +91,7 @@ const Contact = () => {
           (result) => {
             console.log(result.text);
             alert("Email Sent");
+            setIsLoading(false);
             cancelCourse();
           },
           (error) => {
@@ -178,7 +179,6 @@ const Contact = () => {
                   name="name"
                   onChange={(e) => handleChange("name", e.target.value)}
                   value={fields["name"]}
-                  id="cancel"
                 />
                 <span className="error">{errors["name"]}</span>
               </Form.Group>
@@ -191,7 +191,6 @@ const Contact = () => {
                   name="your_email"
                   onChange={(e) => handleChange("email", e.target.value)}
                   value={fields["email"]}
-                  id="cancel"
                 />
                 <span className="error">{errors["email"]}</span>
               </Form.Group>
@@ -207,11 +206,9 @@ const Contact = () => {
               </Form.Group>
               <Button
                 type="submit"
-                disabled={isLoading}
                 className="submitBtn"
                 value="Send"
                 onClick={(e) => sendEmail(e)}
-                id="cancel"
               >
                 {isLoading ? "loading..." : "Submit"}
               </Button>
