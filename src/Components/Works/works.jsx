@@ -72,7 +72,7 @@ const Works = () => {
                   <Card.Text>
                     <p>Responsive E-commerce Web Application.</p>
                   </Card.Text>
-                  <a href="https://ecommerce4-two.vercel.app/" target="blank_">
+                  <a href="https://my-ecommerce-ys-react.vercel.app/" target="blank_">
                     <Button className="workBtn">More Details</Button>
                   </a>
                 </Card.Body>
