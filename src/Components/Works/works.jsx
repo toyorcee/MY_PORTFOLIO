@@ -10,6 +10,7 @@ import possibility from "../../asset/possibility.png";
 import shopper_img from "../../asset/smiling.webp";
 import womaneating from "../../assets/womaneating.jpg";
 import penthouse from "../../asset/penthouse7.jpg";
+import crypto from "../../asset/hero-img.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants.js";
 
@@ -66,13 +67,16 @@ const Works = () => {
               viewport={{ once: false, amount: 0.5 }}
             >
               <Card className="worksImgs">
-                <Card.Img src={ecomm} className="worksImg" />
+                <Card.Img src={crypto} className="worksImg" />
                 <Card.Body>
-                  <Card.Title>E-commerce</Card.Title>
+                  <Card.Title>TEFi</Card.Title>
                   <Card.Text>
-                    <p>Responsive E-commerce Web Application.</p>
+                    <p>Responsive Cryptocurrency Web Application.</p>
                   </Card.Text>
-                  <a href="https://my-ecommerce-ys-react.vercel.app/" target="blank_">
+                  <a
+                    href="https://coingeckoproject.vercel.app/"
+                    target="blank_"
+                  >
                     <Button className="workBtn">More Details</Button>
                   </a>
                 </Card.Body>
@@ -83,6 +87,31 @@ const Works = () => {
             <motion.div
               className="md:w-full mx-auto py-8 rounded mb-32"
               variants={fadeIn("right", 0.3)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.5 }}
+            >
+              <Card className="worksImgs">
+                <Card.Img src={ecomm} className="worksImg" />
+                <Card.Body>
+                  <Card.Title>E-commerce</Card.Title>
+                  <Card.Text>
+                    <p>Responsive E-commerce Web Application.</p>
+                  </Card.Text>
+                  <a
+                    href="https://my-ecommerce-ys-react.vercel.app/"
+                    target="blank_"
+                  >
+                    <Button className="workBtn">More Details</Button>
+                  </a>
+                </Card.Body>
+              </Card>
+            </motion.div>
+          </Col>
+          <Col md={4}>
+            <motion.div
+              className="md:w-full mx-auto py-8 rounded mb-32"
+              variants={fadeIn("left", 0.3)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.5 }}
@@ -110,7 +139,7 @@ const Works = () => {
           <Col md={4}>
             <motion.div
               className="md:w-full mx-auto py-8 rounded mb-32"
-              variants={fadeIn("left", 0.3)}
+              variants={fadeIn("right", 0.3)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.5 }}
@@ -135,7 +164,7 @@ const Works = () => {
           <Col md={4}>
             <motion.div
               className="md:w-full mx-auto py-8 rounded mb-32"
-              variants={fadeIn("right", 0.3)}
+              variants={fadeIn("left", 0.3)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.5 }}
@@ -160,7 +189,7 @@ const Works = () => {
           <Col md={4}>
             <motion.div
               className="md:w-full mx-auto py-8 rounded mb-32"
-              variants={fadeIn("left", 0.3)}
+              variants={fadeIn("right", 0.3)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.5 }}
@@ -182,7 +211,7 @@ const Works = () => {
           <Col md={4}>
             <motion.div
               className="md:w-full mx-auto py-8 rounded mb-32"
-              variants={fadeIn("right", 0.3)}
+              variants={fadeIn("left", 0.3)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.5 }}
