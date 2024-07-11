@@ -8,7 +8,7 @@ import Facebookicon from "../../asset/facebook-icon.png";
 import instagramicon from "../../asset/instagram.png";
 import twittericon from "../../asset/twitter.png";
 import linkedin from "../../asset/linkedin.webp";
-import git from "../../asset/gitt.png";
+import git from "../../asset/litugit.jpg";
 import emailjs from "@emailjs/browser";
 import { Container, Button, Form } from "react-bootstrap";
 import { motion } from "framer-motion";
