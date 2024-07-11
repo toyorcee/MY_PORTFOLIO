@@ -7,7 +7,8 @@ import Facebook from "../../asset/facebook.png";
 import Facebookicon from "../../asset/facebook-icon.png";
 import instagramicon from "../../asset/instagram.png";
 import twittericon from "../../asset/twitter.png";
-import youtubeicon from "../../asset/youtube.png";
+import linkedin from "../../asset/linkedin.webp";
+import git from "../../asset/gitt.png";
 import emailjs from "@emailjs/browser";
 import { Container, Button, Form } from "react-bootstrap";
 import { motion } from "framer-motion";
@@ -213,10 +214,27 @@ const Contact = () => {
                 {isLoading ? "loading..." : "Submit"}
               </Button>
               <div className="links">
-                <img src={Facebookicon} alt="facebook" className="link" />
-                <img src={instagramicon} alt="instagram" className="link" />
-                <img src={twittericon} alt="twitter" className="link" />
-                <img src={youtubeicon} alt="youtube" className="link" />
+                <a
+                  href="https://facebook.com/olaniyan.segunnasri"
+                  target="_blank"
+                >
+                  <img src={Facebookicon} alt="facebook" className="link" />
+                </a>
+                <a href="https://instagram.com/teecrane_" target="_blank">
+                  <img src={instagramicon} alt="instagram" className="link" />
+                </a>
+                <a href="https://twitter.com/toyosicrane" target="_blank">
+                  <img src={twittericon} alt="twitter" className="link" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/segun-olaniyan-93b447308/"
+                  target="_blank"
+                >
+                  <img src={linkedin} alt="linkedin" className="link" />
+                </a>
+                <a href="https://github.com/toyorcee" target="_blank">
+                  <img src={git} alt="github" className="link" />
+                </a>
               </div>
             </Form>
           </motion.div>
