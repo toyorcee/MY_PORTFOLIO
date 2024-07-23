@@ -8,6 +8,7 @@ import ecomm from "../../asset/ecomm.webp";
 import gallery04 from "../../asset/gallery04.png";
 import possibility from "../../asset/possibility.png";
 import shopper_img from "../../asset/smiling.webp";
+import takeoff from "../../assets/take-off.webp";
 import womaneating from "../../assets/womaneating.jpg";
 import penthouse from "../../asset/penthouse7.jpg";
 import crypto from "../../asset/hero-img.png";
@@ -153,6 +154,31 @@ const Works = () => {
                   </Card.Text>
                   <a
                     href="https://toyorcee-shopper.netlify.app/"
+                    target="blank_"
+                  >
+                    <Button className="workBtn">More Details</Button>
+                  </a>
+                </Card.Body>
+              </Card>
+            </motion.div>
+          </Col>
+          <Col md={4}>
+            <motion.div
+              className="md:w-full mx-auto py-8 rounded mb-32"
+              variants={fadeIn("left", 0.3)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.5 }}
+            >
+              <Card className="worksImgs">
+                <Card.Img src={takeoff} className="worksImg" />
+                <Card.Body>
+                  <Card.Title>TAKE-OFF</Card.Title>
+                  <Card.Text>
+                    <p>An Airline Landing-Page.</p>
+                  </Card.Text>
+                  <a
+                    href="https://hotelbookingproject.vercel.app/"
                     target="blank_"
                   >
                     <Button className="workBtn">More Details</Button>
