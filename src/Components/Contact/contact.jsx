@@ -233,7 +233,7 @@ const Contact = () => {
                   <img src={linkedin} alt="linkedin" className="link" />
                 </a>
                 <a href="https://github.com/toyorcee" target="_blank">
-                  <img src={git} alt="github" className="link" />
+                  <img src={git} alt="github" className="github link"/>
                 </a>
               </div>
             </Form>
