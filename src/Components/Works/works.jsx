@@ -7,7 +7,7 @@ import robot from "../../asset/robot.png";
 import ecomm from "../../asset/ecomm.webp";
 import gallery04 from "../../asset/gallery04.png";
 import possibility from "../../asset/possibility.png";
-import shopper_img from "../../asset/smiling.webp";
+import blog_img from "../../asset/blog.webp";
 import takeoff from "../../assets/take-off.webp";
 import womaneating from "../../assets/womaneating.jpg";
 import penthouse from "../../asset/penthouse7.jpg";
@@ -68,16 +68,13 @@ const Works = () => {
               viewport={{ once: false, amount: 0.5 }}
             >
               <Card className="worksImgs">
-                <Card.Img src={crypto} className="worksImg" />
+                <Card.Img src={blog_img} className="worksImg" />
                 <Card.Body>
-                  <Card.Title>TEFi</Card.Title>
+                  <Card.Title>Yosi's Blog</Card.Title>
                   <Card.Text>
-                    <p>Responsive Cryptocurrency Web Application.</p>
+                    <p>Responsive MERN Blog</p>
                   </Card.Text>
-                  <a
-                    href="https://coingeckoproject.vercel.app/"
-                    target="blank_"
-                  >
+                  <a href="https://yosisblog.onrender.com/" target="blank_">
                     <Button className="workBtn">More Details</Button>
                   </a>
                 </Card.Body>
@@ -99,10 +96,7 @@ const Works = () => {
                   <Card.Text>
                     <p>Responsive E-commerce Web Application.</p>
                   </Card.Text>
-                  <a
-                    href="https://my-ecommerce-ys-react.vercel.app/"
-                    target="blank_"
-                  >
+                  <a href="https://techxtrostore.vercel.app/" target="blank_">
                     <Button className="workBtn">More Details</Button>
                   </a>
                 </Card.Body>
@@ -146,14 +140,14 @@ const Works = () => {
               viewport={{ once: false, amount: 0.5 }}
             >
               <Card className="worksImgs">
-                <Card.Img src={shopper_img} className="worksImg" />
+                <Card.Img src={crypto} className="worksImg" />
                 <Card.Body>
-                  <Card.Title>SHOPPER</Card.Title>
+                  <Card.Title>TEFi</Card.Title>
                   <Card.Text>
-                    <p>Responsive MERN E-commerce App</p>
+                    <p>Responsive Cryptocurrency Web Application.</p>
                   </Card.Text>
                   <a
-                    href="https://toyorcee-shopper.netlify.app/"
+                    href="https://coingeckoproject.vercel.app/"
                     target="blank_"
                   >
                     <Button className="workBtn">More Details</Button>
