@@ -1,147 +1,197 @@
-import React from "react";
-import { useState } from "react";
-import Container from "react-bootstrap/Container";
-import "./navbar.css";
-import logo from "../../assets/logo.png";
+import React, { useState } from "react";
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+  Button,
+  Box,
+} from "@mui/material";
+import { Menu as MenuIcon } from "@mui/icons-material";
 import { Link } from "react-scroll";
+import logo from "../../assets/logo.png";
 import contactImg from "../../assets/contact-icon-png-0.png";
-import menu from "../../asset/menu.png";
 
 const NavBar = () => {
-  const [showMenu, setShowMenu] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const menuItems = [
+    { label: "Home", to: "intro", offset: -50 },
+    { label: "About", to: "skills", offset: -80 },
+    { label: "Portfolio", to: "works", offset: -20 },
+    { label: "Clients", to: "clients", offset: -10 },
+    { label: "Contact", to: "contact", offset: -50 },
+  ];
+
   return (
-    <Container>
-      <nav className="navbar" id="naav">
-        <img src={logo} alt="logo" className="logo" />
-        <div className="desktopMenu">
-          <Link
-            activeClass="active"
-            to="intro"
-            spy={true}
-            smooth={true}
-            offset={-50}
-            duration={500}
-            className="desktopMenuListItem"
-          >
-            Home
-          </Link>
-          <Link
-            activeClass="active"
-            to="skills"
-            spy={true}
-            smooth={true}
-            offset={-80}
-            duration={500}
-            className="desktopMenuListItem"
-          >
-            About
-          </Link>
-          <Link
-            activeClass="active"
-            to="works"
-            spy={true}
-            smooth={true}
-            offset={-20}
-            duration={500}
-            className="desktopMenuListItem"
-          >
-            Portfolio
-          </Link>
-          <Link
-            activeClass="active"
-            to="clients"
-            spy={true}
-            smooth={true}
-            offset={-10}
-            duration={500}
-            className="desktopMenuListItem"
-          >
-            Clients
-          </Link>
-        </div>
-        <button
-          className="desktopMenuBtn"
-          onClick={() => {
-            document
-              .getElementById("contact")
-              .scrollIntoView({ behavior: "smooth" });
+    <AppBar
+      position="sticky"
+      sx={{
+        backgroundColor: "rgb(30, 30, 30)",
+        padding: "0.5rem",
+        zIndex: 3,
+      }}
+    >
+      <Toolbar
+        sx={{
+          display: "flex",
+          justifyContent: "center", // Centers the toolbar content
+          alignItems: "center",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            width: "100%",
+            maxWidth: "1200px",
+            margin: "0 auto",
+            position: "relative", // Add relative positioning for finer control
           }}
         >
-          <img src={contactImg} alt="" className="desktopMenuImg" /> Contact Me{" "}
-        </button>
-        <img
-          src={menu}
-          alt="Menu"
-          className="mobMenu"
-          onClick={() => setShowMenu(!showMenu)}
-        />
-        <div
-          className="navMenu"
-          style={{ display: showMenu ? "flex" : "none" }}
+          {/* Logo */}
+          <Box
+            component="img"
+            src={logo}
+            alt="Logo"
+            sx={{
+              height: "3rem",
+              width: "4rem",
+              objectFit: "cover",
+              position: "absolute",
+              left: 0, // Pin the logo to the left
+            }}
+          />
+
+          {/* Desktop Menu */}
+          <Box
+            sx={{
+              display: { xs: "none", md: "flex" },
+              justifyContent: "center", // Centers menu items within available space
+              flex: 1, // Allows the menu to occupy the middle space
+              gap: "1.5rem",
+            }}
+          >
+            {menuItems.map((item) => (
+              <Link
+                key={item.label}
+                activeClass="active"
+                to={item.to}
+                spy={true}
+                smooth={true}
+                offset={item.offset}
+                duration={500}
+                style={{
+                  cursor: "pointer",
+                  textDecoration: "none",
+                  color: "white",
+                }}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </Box>
+
+          {/* Contact Button */}
+          <Box
+            sx={{
+              display: { xs: "none", md: "block" },
+              position: "absolute",
+              right: 0, // Ensure the button stays on the far right
+            }}
+          >
+            <Button
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+              sx={{
+                backgroundColor: "white",
+                color: "black",
+                borderRadius: "2rem",
+                padding: "0.5rem 1rem",
+                "&:hover": {
+                  backgroundColor: "yellow",
+                  color: "black",
+                },
+              }}
+            >
+              <Box
+                component="img"
+                src={contactImg}
+                alt="Contact"
+                sx={{
+                  height: "1rem",
+                  width: "1rem",
+                  marginRight: "0.5rem",
+                }}
+              />
+              Contact Me
+            </Button>
+          </Box>
+
+          {/* Mobile Menu Icon */}
+          <IconButton
+            edge="end"
+            color="inherit"
+            sx={{ display: { xs: "block", md: "none" } }}
+            onClick={() => setDrawerOpen(true)}
+          >
+            <MenuIcon />
+          </IconButton>
+        </Box>
+      </Toolbar>
+
+      {/* Mobile Drawer */}
+      <Drawer
+        anchor="right"
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+      >
+        <List
+          sx={{
+            width: 250,
+            backgroundColor: "rgb(40, 40, 40)",
+            color: "white",
+            height: "100%",
+            padding: "1rem",
+          }}
         >
-          <Link
-            activeClass="active"
-            to="intro"
-            spy={true}
-            smooth={true}
-            offset={-50}
-            duration={500}
-            className="listItem"
-            onClick={() => setShowMenu(false)}
-          >
-            Home
-          </Link>
-          <Link
-            activeClass="active"
-            to="skills"
-            spy={true}
-            smooth={true}
-            offset={-80}
-            duration={500}
-            className="listItem"
-            onClick={() => setShowMenu(false)}
-          >
-            About
-          </Link>
-          <Link
-            activeClass="active"
-            to="works"
-            spy={true}
-            smooth={true}
-            offset={-60}
-            duration={500}
-            className="listItem"
-            onClick={() => setShowMenu(false)}
-          >
-            Portfolio
-          </Link>
-          <Link
-            activeClass="active"
-            to="clients"
-            spy={true}
-            smooth={true}
-            offset={-50}
-            duration={500}
-            className="listItem"
-            onClick={() => setShowMenu(false)}
-          >
-            Clients
-          </Link>
-          <Link
-            activeClass="active"
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-50}
-            duration={500}
-            className="listItem"
-            onClick={() => setShowMenu(false)}
-          >
-            Contact
-          </Link>
-        </div>
-      </nav>
-    </Container>
+          {menuItems.map((item) => (
+            <ListItem
+              button
+              key={item.label}
+              onClick={() => setDrawerOpen(false)}
+              sx={{
+                "&:hover": {
+                  backgroundColor: "rgb(30, 30, 30)",
+                  color: "yellow",
+                },
+              }}
+            >
+              <Link
+                to={item.to}
+                spy={true}
+                smooth={true}
+                offset={item.offset}
+                duration={500}
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  width: "100%",
+                }}
+              >
+                <ListItemText primary={item.label} />
+              </Link>
+            </ListItem>
+          ))}
+        </List>
+      </Drawer>
+    </AppBar>
   );
 };
 
