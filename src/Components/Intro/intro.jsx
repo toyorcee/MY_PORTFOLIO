@@ -1,16 +1,17 @@
 import React from "react";
 import "./intro.css";
-import bg from "../../assets/bg.jpeg";
+import bg from "../../asset/Office_pic.jpeg";
 import { Link } from "react-scroll";
 import hireme from "../../asset/hireme.png";
 import { Container, Button } from "react-bootstrap";
 import { TypeAnimation } from "react-type-animation";
+import { Box } from "@mui/material";
 
 const Intro = () => {
   return (
     <section id="intro">
       <Container>
-        <div className="introContent">
+        <Box className="introContent">
           <span className="hello">Hello,</span>
           <span className="introText">
             I'm <span className="introName">Toyosi</span>
@@ -19,9 +20,8 @@ const Intro = () => {
           <p className="introPara">
             <TypeAnimation
               sequence={[
-                // Same substring at the start will only be typed out once, initially
-                "Full-Stack DEVELOPER",
-                1000, // wait 1s before replacing "Mice" with "Hamsters"
+                "MERN Full-Stack DEVELOPER",
+                1000, 
                 "Specialized in front-end",
                 1000,
                 "Specialized in back-end",
@@ -42,7 +42,7 @@ const Intro = () => {
               <b className="hiire">Hire Me</b>
             </Button>
           </Link>
-        </div>
+        </Box>
         <img src={bg} alt="profile" className="bg mine" />
       </Container>
     </section>

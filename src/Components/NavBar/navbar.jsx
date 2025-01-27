@@ -32,13 +32,13 @@ const NavBar = () => {
       sx={{
         backgroundColor: "rgb(30, 30, 30)",
         padding: "0.5rem",
-        zIndex: 3,
+        zIndex: 5, // Ensure the navbar is above other elements
       }}
     >
       <Toolbar
         sx={{
           display: "flex",
-          justifyContent: "center", // Centers the toolbar content
+          justifyContent: "center",
           alignItems: "center",
         }}
       >
@@ -49,7 +49,7 @@ const NavBar = () => {
             width: "100%",
             maxWidth: "1200px",
             margin: "0 auto",
-            position: "relative", // Add relative positioning for finer control
+            position: "relative",
           }}
         >
           {/* Logo */}
@@ -62,7 +62,7 @@ const NavBar = () => {
               width: "4rem",
               objectFit: "cover",
               position: "absolute",
-              left: 0, // Pin the logo to the left
+              left: 0,
             }}
           />
 
@@ -70,8 +70,8 @@ const NavBar = () => {
           <Box
             sx={{
               display: { xs: "none", md: "flex" },
-              justifyContent: "center", // Centers menu items within available space
-              flex: 1, // Allows the menu to occupy the middle space
+              justifyContent: "center",
+              flex: 1,
               gap: "1.5rem",
             }}
           >
@@ -100,7 +100,7 @@ const NavBar = () => {
             sx={{
               display: { xs: "none", md: "block" },
               position: "absolute",
-              right: 0, // Ensure the button stays on the far right
+              right: 0,
             }}
           >
             <Button
@@ -137,8 +137,15 @@ const NavBar = () => {
           {/* Mobile Menu Icon */}
           <IconButton
             edge="end"
-            color="inherit"
-            sx={{ display: { xs: "block", md: "none" } }}
+            sx={{
+              display: { xs: "block", md: "none" }, 
+              color: "white", 
+              position: "absolute", 
+              right: "1rem", 
+              top: "50%", 
+              transform: "translateY(-50%)", 
+              zIndex: 10, 
+            }}
             onClick={() => setDrawerOpen(true)}
           >
             <MenuIcon />
