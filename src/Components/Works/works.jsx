@@ -11,7 +11,7 @@ import possibility from "../../asset/possibility.png";
 import blog_img from "../../asset/blog.webp";
 import takeoff from "../../assets/take-off.webp";
 import womaneating from "../../assets/womaneating.jpg";
-import penthouse from "../../asset/penthouse7.jpg";
+import movieimg from "../../assets/th.jfif";
 import crypto from "../../asset/hero-img.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants.js";
@@ -47,13 +47,13 @@ const Works = () => {
               viewport={{ once: false, amount: 0.5 }}
             >
               <Card className="worksImgs">
-                <Card.Img src={penthouse} className="worksImg" />
+                <Card.Img src={movieimg} className="worksImg" />
                 <Card.Body>
-                  <Card.Title>Traveller</Card.Title>
+                  <Card.Title>My MovieApp</Card.Title>
                   <Card.Text>
-                    <p>Responsive MERN Travel Web Application.</p>
+                    <p>Responsive Next.Js Movie Application</p>
                   </Card.Text>
-                  <a href="https://traveltorelax.netlify.app/" target="blank_">
+                  <a href="https://next-movies-fawn.vercel.app/" target="blank_">
                     <Button className="workBtn">More Details</Button>
                   </a>
                 </Card.Body>
