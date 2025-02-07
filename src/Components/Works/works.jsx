@@ -53,7 +53,10 @@ const Works = () => {
                   <Card.Text>
                     <p>Responsive Next.Js Movie Application</p>
                   </Card.Text>
-                  <a href="https://next-movies-fawn.vercel.app/" target="blank_">
+                  <a
+                    href="https://next-movies-fawn.vercel.app/"
+                    target="blank_"
+                  >
                     <Button className="workBtn">More Details</Button>
                   </a>
                 </Card.Body>
@@ -166,14 +169,14 @@ const Works = () => {
               viewport={{ once: false, amount: 0.5 }}
             >
               <Card className="worksImgs">
-                <Card.Img src={takeoff} className="worksImg" />
-                <Card.Body>
-                  <Card.Title>TAKE-OFF</Card.Title>
+                <Card.Img src={man_studying} className="worksImg" />
+                <Card.Body className="py-1 my-1">
+                  <Card.Title>Skill Kernel</Card.Title>
                   <Card.Text>
-                    <p>An Airline Landing-Page.</p>
+                    <p>Responsive Educational Application.</p>
                   </Card.Text>
                   <a
-                    href="https://hotelbookingproject.vercel.app/"
+                    href="https://skill-kernel-six.vercel.app/"
                     target="blank_"
                   >
                     <Button className="workBtn">More Details</Button>
@@ -245,31 +248,6 @@ const Works = () => {
                     <p>Responsive FoodApp Application.</p>
                   </Card.Text>
                   <a href="https://toyo-gericht.vercel.app/" target="blank_">
-                    <Button className="workBtn">More Details</Button>
-                  </a>
-                </Card.Body>
-              </Card>
-            </motion.div>
-          </Col>
-          <Col md={4}>
-            <motion.div
-              className="md:w-full mx-auto py-8 rounded mb-32"
-              variants={fadeIn("left", 0.3)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.5 }}
-            >
-              <Card className="worksImgs">
-                <Card.Img src={man_studying} className="worksImg" />
-                <Card.Body className="py-1 my-1">
-                  <Card.Title>Skill Kernel</Card.Title>
-                  <Card.Text>
-                    <p>Responsive Educational Application.</p>
-                  </Card.Text>
-                  <a
-                    href="https://skill-kernel-six.vercel.app/"
-                    target="blank_"
-                  >
                     <Button className="workBtn">More Details</Button>
                   </a>
                 </Card.Body>
