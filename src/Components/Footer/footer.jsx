@@ -6,7 +6,7 @@ import { Link } from "react-scroll";
 const Footer = () => {
   return (
     <footer className="footer">
-      Copyright &#169; 2024<span className="yosi">'YOSI.</span> All Rights
+      Copyright &#169; 2025<span className="yosi">'YOSI.</span> All Rights
       Reserved
       <Link to="naav" smooth={true} spy={true} duration={700} id="backToTop">
         <img src={toTop} alt="deployment" className="totop" />
