@@ -32,7 +32,6 @@ const Works = () => {
             sure that my work is pixel perfect. I am excited to bring my skills
             & experience to help businesses achieve their goals and create a
             strong online presence.
-            <br />
           </span>
         </motion.div>
         <p className="what">What are you doing today?</p>
@@ -50,7 +49,14 @@ const Works = () => {
                 <Card.Body>
                   <Card.Title>My MovieApp</Card.Title>
                   <Card.Text>
-                    <p>Responsive Next.Js Movie Application</p>
+                    <p>
+                      A modern movie discovery platform built with Next.js,
+                      featuring real-time updates and a responsive design for
+                      seamless browsing across devices.
+                    </p>
+                    <div className="tech-stack">
+                      Tech: Next.js, API Integration, Responsive Design
+                    </div>
                   </Card.Text>
                   <a
                     href="https://next-movies-fawn.vercel.app/"
@@ -75,7 +81,14 @@ const Works = () => {
                 <Card.Body>
                   <Card.Title>Yosi's Blog</Card.Title>
                   <Card.Text>
-                    <p>Responsive MERN Blog</p>
+                    <p>
+                      A full-stack blog platform with user authentication, rich
+                      text editing, and dynamic content management using the
+                      MERN stack.
+                    </p>
+                    <div className="tech-stack">
+                      Tech: MongoDB, Express.js, React, Node.js
+                    </div>
                   </Card.Text>
                   <a href="https://yosisblog.onrender.com/" target="blank_">
                     <Button className="workBtn">More Details</Button>
@@ -97,7 +110,14 @@ const Works = () => {
                 <Card.Body>
                   <Card.Title>E-commerce</Card.Title>
                   <Card.Text>
-                    <p>Responsive E-commerce Web Application.</p>
+                    <p>
+                      A feature-rich e-commerce platform with product
+                      management, cart functionality, and secure payment
+                      integration.
+                    </p>
+                    <div className="tech-stack">
+                      Tech: React, Redux, Payment Gateway, Responsive UI
+                    </div>
                   </Card.Text>
                   <a href="https://techxtrostore.vercel.app/" target="blank_">
                     <Button className="workBtn">More Details</Button>
@@ -115,14 +135,17 @@ const Works = () => {
               viewport={{ once: false, amount: 0.5 }}
             >
               <Card className="worksImgs">
-                <Card.Img
-                  src={womaneating}
-                  className="worksImg food-ordering"
-                />
+                <Card.Img src={womaneating} className="worksImg" />
                 <Card.Body>
                   <Card.Title>Toyosi's Kitchen</Card.Title>
                   <Card.Text>
-                    <p>Responsive MERN Food-Ordering-App</p>
+                    <p>
+                      A comprehensive food ordering system with real-time order
+                      tracking, menu management, and secure payment processing.
+                    </p>
+                    <div className="tech-stack">
+                      Tech: MERN Stack, Real-time Updates, Payment Integration
+                    </div>
                   </Card.Text>
                   <a
                     href="https://toyorceeskitchen.netlify.app/"
@@ -147,7 +170,14 @@ const Works = () => {
                 <Card.Body>
                   <Card.Title>TEFi</Card.Title>
                   <Card.Text>
-                    <p>Responsive Cryptocurrency Web Application.</p>
+                    <p>
+                      A cryptocurrency tracking application with real-time price
+                      updates, market analysis, and portfolio management
+                      features.
+                    </p>
+                    <div className="tech-stack">
+                      Tech: React, Crypto APIs, Charts, Real-time Data
+                    </div>
                   </Card.Text>
                   <a
                     href="https://coingeckoproject.vercel.app/"
@@ -169,10 +199,16 @@ const Works = () => {
             >
               <Card className="worksImgs">
                 <Card.Img src={man_studying} className="worksImg" />
-                <Card.Body className="py-1 my-1">
+                <Card.Body>
                   <Card.Title>Skill Kernel</Card.Title>
                   <Card.Text>
-                    <p>Responsive Educational Application.</p>
+                    <p>
+                      An interactive learning platform with course management,
+                      progress tracking, and multimedia content delivery.
+                    </p>
+                    <div className="tech-stack">
+                      Tech: React, Node.js, Learning Management System
+                    </div>
                   </Card.Text>
                   <a
                     href="https://skill-kernel-six.vercel.app/"
@@ -197,7 +233,13 @@ const Works = () => {
                 <Card.Body>
                   <Card.Title>HooBank</Card.Title>
                   <Card.Text>
-                    <p>Responsive Bank Web Application.</p>
+                    <p>
+                      A modern banking interface showcasing next-generation
+                      payment solutions with an emphasis on user experience.
+                    </p>
+                    <div className="tech-stack">
+                      Tech: React, Tailwind CSS, Modern UI/UX
+                    </div>
                   </Card.Text>
                   <a
                     href="https://hoo-bank-eight-lime.vercel.app/"
@@ -219,10 +261,16 @@ const Works = () => {
             >
               <Card className="worksImgs">
                 <Card.Img src={possibility} className="worksImg" />
-                <Card.Body className="py-1 my-1">
+                <Card.Body>
                   <Card.Title>GPT-3</Card.Title>
                   <Card.Text>
-                    <p>Fully Responsive Modern UI/UX Website.</p>
+                    <p>
+                      A modern UI/UX showcase demonstrating the possibilities of
+                      AI integration with sleek, responsive design.
+                    </p>
+                    <div className="tech-stack">
+                      Tech: React, Modern UI/UX, Animation
+                    </div>
                   </Card.Text>
                   <a href="https://gpt-3-pi-two.vercel.app/" target="blank_">
                     <Button className="workBtn">More Details</Button>
@@ -241,10 +289,16 @@ const Works = () => {
             >
               <Card className="worksImgs">
                 <Card.Img src={gallery04} className="worksImg" />
-                <Card.Body className="py-1 my-1">
+                <Card.Body>
                   <Card.Title>GERICHT</Card.Title>
                   <Card.Text>
-                    <p>Responsive FoodApp Application.</p>
+                    <p>
+                      An elegant restaurant application featuring menu
+                      management, reservation system, and beautiful UI design.
+                    </p>
+                    <div className="tech-stack">
+                      Tech: React, Responsive Design, Custom Animations
+                    </div>
                   </Card.Text>
                   <a href="https://toyo-gericht.vercel.app/" target="blank_">
                     <Button className="workBtn">More Details</Button>

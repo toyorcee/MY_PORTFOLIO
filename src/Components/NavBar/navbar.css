@@ -9,7 +9,7 @@
   top: 0;
   position: sticky;
   z-index: 3;
-  background: rgb(30, 30, 30);
+  background: white;
 }
 
 .logo {
@@ -22,7 +22,7 @@
   cursor: pointer;
   margin: 1rem;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .desktopMenuListItem:hover {
@@ -43,7 +43,7 @@
   cursor: pointer;
 }
 
-.desktopMenuBtn:hover{
+.desktopMenuBtn:hover {
   background: yellow;
   color: black;
 }
@@ -78,15 +78,15 @@
   padding: 0.5rem;
   height: fit-content;
   min-width: 15rem;
-  background: rgb(40, 40, 40);
+  background: white;
   border-radius: 1rem;
 }
 
 .listItem {
-  color: white;
+  color: black;
   padding: 0.5rem 3rem;
   margin: 0.25rem;
-  background: rgb(30, 30, 30);
+  background: rgb(240, 240, 240);
 }
 
 @media screen and (max-width: 720px) {
@@ -99,7 +99,7 @@
   .desktopMenuBtn {
     display: none;
   }
-  .listItem{
+  .listItem {
     text-decoration: none;
   }
 }
@@ -113,16 +113,16 @@
   .desktopMenuBtn {
     display: none;
   }
-  .listItem{
+  .listItem {
     text-decoration: none;
   }
-  .listItem:hover{
+  .listItem:hover {
     color: yellow;
   }
-  .listItem:active{
+  .listItem:active {
     color: yellow;
   }
-  .navbar{
+  .navbar {
     width: 100%;
     margin-left: 10px;
   }

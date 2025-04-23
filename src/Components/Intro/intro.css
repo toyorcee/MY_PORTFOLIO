@@ -1,46 +1,59 @@
 #intro {
   min-height: calc(100vh - 5rem);
-  width: 100vw;
+  width: 100%;
   max-width: 75rem;
-  margin: 0 auto;
+  margin: 2rem auto;
+  padding: 1rem;
   overflow: hidden;
   position: relative;
+  background-color: white;
+  display: flex;
+  align-items: center;
 }
 
 .bg {
   position: absolute;
-  top: -4rem;
-  right: 0;
-  z-index: -1;
-  object-fit: cover;
-  height: 100vh;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  z-index: 0;
+  object-fit: contain;
+  max-height: 85vh;
+  max-width: 45%;
   border-radius: 25%;
 }
 
 .introContent {
-  height: 100vh;
-  width: 100vw;
+  height: auto;
+  width: 50%;
   padding: 2rem;
   font-size: 3rem;
   font-weight: 700;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 3rem;
 }
 
 .hello {
   font-size: 1.75rem;
   font-weight: 100;
+  color: black;
+}
+
+.introText {
+  color: black;
 }
 
 .introName {
-  color: yellow;
+  color: #007bff;
 }
 
 .introPara {
   font-size: medium;
   font-weight: 300;
   letter-spacing: 1px;
+  color: black;
 }
 
 .btn {
@@ -50,11 +63,15 @@
   border: none;
   border-radius: 2rem;
   cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
   color: black;
   background: yellow;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 }
 
 .btnhire {
@@ -66,104 +83,94 @@
   color: black;
 }
 
-.hiire{
+.hiire {
   color: black;
 }
 
 @media screen and (max-width: 840px) and (min-width: 769px) {
-  /* .bg {
-    right: -5vw;
-  } */
   .introContent {
+    width: 60%;
     font-size: 7vw;
   }
   .hello {
     font-size: 4.5vw;
   }
+  .bg {
+    max-width: 40%;
+  }
 }
 
 @media screen and (max-width: 768px) and (min-width: 482px) {
   .introContent {
+    width: 100%;
     font-size: 7vw;
-    padding-top: 50px;
+    padding-top: 2rem;
+    z-index: 1;
   }
-  .btn {
-    background: white;
-    margin: 1rem 0;
-    padding: 8px 10px;
-    border-radius: 1rem;
+  .bg {
+    opacity: 0.3;
+    max-width: 70%;
+    right: 50%;
+    transform: translate(50%, -50%);
   }
 }
 
 @media screen and (max-width: 480px) and (min-width: 424px) {
   .bg {
-    right: 0vw;
-    top: 0;
+    opacity: 0.3;
+    max-width: 80%;
+    right: 50%;
+    transform: translate(50%, -50%);
   }
   .introContent {
+    width: 100%;
     font-size: 8vw;
-    padding-top: 50px;
-  }
-  .hello {
-    font-size: 20px;
-  }
-  .btn {
-    background: white;
-    margin: 1rem 0;
-    padding: 7px 10px;
-    border-radius: 1rem;
-  }
-  .btnhire {
-    object-fit: cover;
-    height: 14px;
-    width: 14px;
+    padding-top: 2rem;
+    z-index: 1;
   }
 }
+
 @media screen and (max-width: 425px) and (min-width: 376px) {
+  .bg {
+    opacity: 0.3;
+    max-width: 90%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
   .introContent {
+    width: 100%;
     font-size: 7vw;
-    padding-top: 100px;
-  }
-  .btn {
-    background: white;
-    margin: 1rem 0;
-    padding: 7px 9px;
-    border-radius: 1rem;
-  }
-  .sequence{
-    font-size: 10px;
+    padding-top: 2rem;
+    z-index: 1;
   }
 }
 
 @media screen and (max-width: 375px) and (min-width: 321px) {
-  .introContent {
-    font-size: 9vw;
-    padding-top: 20px;
+  .bg {
+    opacity: 0.3;
+    max-width: 90%;
+    right: 50%;
+    transform: translate(50%, -50%);
   }
-  .btn {
-    background: white;
-    margin: 1rem 0;
-    padding: 6px 9px;
-    border-radius: 1rem;
+  .introContent {
+    width: 100%;
+    font-size: 9vw;
+    padding-top: 2rem;
+    z-index: 1;
   }
 }
+
 @media screen and (max-width: 320px) and (min-width: 1px) {
-  .introContent {
-    font-size: 5vw;
-    padding-top: 150px;
-  }
   .bg {
-    margin-top: 2rem;
+    opacity: 0.3;
+    max-width: 95%;
+    right: 50%;
+    transform: translate(50%, -50%);
   }
-  .btn {
-    background: white;
-    margin: 1rem 0;
-    padding: 6px 9px;
-    border-radius: 1rem;
-  }
-  .btnhire {
-    object-fit: cover;
-    height: 10px;
-    width: 10px;
+  .introContent {
+    width: 100%;
+    font-size: 5vw;
+    padding-top: 2rem;
+    z-index: 1;
   }
 }

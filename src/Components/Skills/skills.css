@@ -1,47 +1,80 @@
 #skills {
   overflow: hidden;
-  width: 100vw;
-  max-width: 65rem;
+  width: 100%;
+  max-width: 75rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 0 auto;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  background-color: white;
 }
 
 .skillTitle {
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: 600;
-  padding-top: 3rem;
+  padding-top: 2rem;
   margin-bottom: 1.5rem;
+  color: black;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(120deg, #007bff, #00a6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: capitalize;
+}
+
+.skillTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #007bff, #00a6ff);
+  border-radius: 2px;
 }
 
 .skillDesc {
-  font-size: 1rem;
-  font-weight: 300;
-  max-width: 50rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-width: 55rem;
   padding: 0 2rem;
-  margin: 7px 0px;
+  margin: 1.5rem 0;
+  color: #333;
+  line-height: 1.8;
 }
 
 .h2 {
-  color: white;
+  color: #007bff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .skillBars {
   margin: 1.5rem;
-  width: 100vw;
+  width: 100%;
   max-width: 80%;
   text-align: left;
 }
 
 .skillBar {
   display: flex;
-  margin: 1rem;
-  padding: 1.5rem 2rem;
-  border-radius: 0.5rem;
-  background: rgb(50, 50, 50);
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.skillBar:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .skillBarImg {
@@ -49,120 +82,46 @@
   width: 4rem;
   height: 4rem;
   margin-right: 2rem;
-  padding-top: 2rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background: rgba(0, 123, 255, 0.1);
 }
 
 .skillBarText > p {
-  font-weight: 200;
-  font-size: 0.9rem;
-  margin: 10px 0px;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #555;
+  line-height: 1.6;
 }
 
 @media screen and (max-width: 720px) {
   .skillBarText > p {
-    font-size: 2vw;
+    font-size: 0.9rem;
+  }
+  .skillBar {
+    padding: 1.5rem;
   }
 }
-@media screen and (max-width: 480px) and (min-width: 1px) {
+
+@media screen and (max-width: 480px) {
   .skillBarText > p {
-    font-size: 3vw;
+    font-size: 0.85rem;
   }
   .skillBarImg {
-    /* height: 2.25rem;
-    width: 2.25rem; */
-    display: none;
+    width: 3rem;
+    height: 3rem;
   }
   .skillBarText > h2 {
-    font-size: 5vw;
+    font-size: 1.3rem;
   }
-  #allbg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-      url("../../assets/all4.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    width: 100%;
-    height: auto;
+  .skillBar {
+    flex-direction: column;
   }
-  #djangobg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-      url("../../assets/django.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    width: 100%;
-    height: auto;
+  .skillBarImg {
+    margin-bottom: 1rem;
   }
-  #apibg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-      url("../../assets/api2.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-  }
-  #deploybg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-      url("../../assets/deployment2.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-  }
-  #gitbg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-      url("../../assets/gitbaby2.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-  }
-  #vercelbg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-      url("../../assets/vercel.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-  }
-  #securitybg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-      url("../../assets/security2.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-  }
-  #collabobg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-      url("../../assets/partner.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-  }
-  #troublebg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-      url("../../assets/trouble.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    width: 100%;
-    height: auto;
+  .skillTitle {
+    font-size: 2rem;
   }
 }

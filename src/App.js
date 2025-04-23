@@ -8,7 +8,7 @@ import IceCubeEffect from "./Components/IceCubeEffect/IceCubeEffect";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ background: "white", minHeight: "100vh" }}>
       <IceCubeEffect />
       <NavBar />
       <Intro />

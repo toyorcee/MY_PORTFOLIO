@@ -8,16 +8,35 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
 
 .contactPageTitle {
   font-size: 3rem;
   margin-bottom: 1rem;
+  background: linear-gradient(120deg, #007bff, #00a6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.contactPageTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #007bff, #00a6ff);
+  border-radius: 2px;
 }
 
 .clientDesc {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
 }
 
 .clientImgs {
@@ -39,10 +58,12 @@
   transition: transform 0.3s ease;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: white;
 }
 
 .clientImg:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 768px) {
@@ -74,7 +95,8 @@
 .contactDesc {
   padding: 1rem;
   font-size: medium;
-  font-weight: 300;
+  font-weight: 400;
+  color: #333;
 }
 
 .contactForm {
@@ -95,26 +117,37 @@
   max-width: 40rem;
   margin: 0.5rem;
   padding: 0.5rem 1rem;
-  color: white;
-  border: none;
+  color: #333;
+  border: 1px solid rgba(0, 123, 255, 0.2);
   border-radius: 0.5rem;
-  background: rgb(40, 40, 40);
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.name:focus,
+.email:focus,
+.msg:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
 }
 
 .submitBtn {
-  background: yellow;
+  background: #007bff;
   border: none;
   padding: 12px 16px;
   margin: 1.5rem;
   border-radius: 1rem;
   cursor: pointer;
-  color: black;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .submitBtn:hover {
-  color: black;
-  background: white;
-  cursor: pointer;
+  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .links {
@@ -128,12 +161,16 @@
   width: 3rem;
   margin: 0.75rem;
   cursor: pointer;
-  /* background-color: dark; */
+  transition: transform 0.3s ease;
+}
+
+.link:hover {
+  transform: translateY(-3px);
 }
 
 .error {
   font-size: 0.85rem;
-  color: red;
+  color: #dc3545;
 }
 
 .github {

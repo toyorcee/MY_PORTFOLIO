@@ -7,10 +7,11 @@
   justify-content: center;
   text-align: center;
   padding: 0 0.5rem;
+  background-color: white;
 }
 
 .what {
-  color: yellow;
+  color: #007bff;
   font-size: 21px;
   font-weight: 600;
   padding: 15px;
@@ -19,61 +20,112 @@
 .workstitle {
   margin: 1rem 0;
   font-size: 3rem;
+  background: linear-gradient(120deg, #007bff, #00a6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.workstitle::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #007bff, #00a6ff);
+  border-radius: 2px;
 }
 
 .worksDesc {
   font-weight: 300;
   font-size: 1rem;
   max-width: 45rem;
+  color: #333;
 }
 
 .worksImgs {
-  align-items: center;
-  justify-content: center;
-  max-width: 65rem;
-  flex-wrap: nowrap;
-  margin: 1.5rem 0;
-  background-color: #1e1e1e;
-  border-radius: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  height: 75vh;
-  width: 20vw;
-  border: 2px solid yellow;
+  height: 450px;
+  width: 100%;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 123, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.worksImgs:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.worksImgs .card-body {
+  padding: 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.worksImgs .card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 0.75rem;
+}
+
+.worksImgs .card-text {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: auto;
+}
+
+.worksImgs .card-text p {
+  margin-bottom: 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 4.5rem;
+}
+
+.worksImgs .tech-stack {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 1rem;
 }
 
 .worksImg {
-  object-fit: contain;
-  height: 60vh;
+  object-fit: cover;
+  height: 200px;
   width: 100%;
-  padding: 3.5px 2px;
-  margin: auto;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .workBtn {
-  padding: 0.5rem 2.5rem;
+  background: #007bff;
   border: none;
-  border-radius: 20px;
-  background: rgb(0, 30, 255);
-  font-size: 1rem;
-  margin: 0.5rem 0;
-  cursor: pointer;
-  outline: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .workBtn:hover {
-  color: black;
-  background-color: white;
-  outline: none;
-  border: none;
-}
-.workBtn:hover:focus {
-  color: black;
-  background: rgb(0, 30, 255);
-  outline: none;
-  border: none;
+  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.food-ordering{
+.food-ordering {
   object-fit: cover;
   height: 300px;
   width: 100%;
@@ -82,15 +134,11 @@
 }
 
 @media screen and (max-width: 585px) {
-  .worksImg {
-    height: 48vh;
-    width: 100%;
+  .worksImgs {
+    height: 420px;
   }
 
-  .worksImgs {
-    height: 80vh;
-    width: 90%;
-    max-width: 60rem;
-    border: 1.5px solid yellow;
+  .worksImg {
+    height: 180px;
   }
 }

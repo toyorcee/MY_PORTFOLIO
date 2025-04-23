@@ -4,12 +4,16 @@ import toTop from "../../assets/deploy1.png";
 import { Link } from "react-scroll";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="footer">
-      Copyright &#169; 2024<span className="yosi">'YOSI.</span> All Rights
-      Reserved
+      <div className="footer-content">
+        Copyright &#169; {currentYear}
+        <span className="yosi">'YOSI.</span> All Rights Reserved
+      </div>
       <Link to="naav" smooth={true} spy={true} duration={700} id="backToTop">
-        <img src={toTop} alt="deployment" className="totop" />
+        <img src={toTop} alt="Back to top" className="totop" />
       </Link>
     </footer>
   );

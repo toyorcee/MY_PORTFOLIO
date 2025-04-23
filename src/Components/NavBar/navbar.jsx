@@ -30,7 +30,7 @@ const NavBar = () => {
     <AppBar
       position="sticky"
       sx={{
-        backgroundColor: "rgb(30, 30, 30)",
+        backgroundColor: "white",
         padding: "0.5rem",
         zIndex: 5, // Ensure the navbar is above other elements
       }}
@@ -87,7 +87,7 @@ const NavBar = () => {
                 style={{
                   cursor: "pointer",
                   textDecoration: "none",
-                  color: "white",
+                  color: "black",
                 }}
               >
                 {item.label}
@@ -139,7 +139,7 @@ const NavBar = () => {
             edge="end"
             sx={{
               display: { xs: "block", md: "none" },
-              color: "white",
+              color: "black",
               position: "absolute",
               right: "1rem",
               top: "50%",
@@ -162,8 +162,8 @@ const NavBar = () => {
         <List
           sx={{
             width: 250,
-            backgroundColor: "rgb(40, 40, 40)",
-            color: "white",
+            backgroundColor: "white",
+            color: "black",
             height: "100%",
             padding: "1rem",
           }}
@@ -175,7 +175,7 @@ const NavBar = () => {
               onClick={() => setDrawerOpen(false)}
               sx={{
                 "&:hover": {
-                  backgroundColor: "rgb(30, 30, 30)",
+                  backgroundColor: "rgb(240, 240, 240)",
                   color: "yellow",
                 },
               }}

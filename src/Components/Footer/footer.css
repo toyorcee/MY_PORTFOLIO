@@ -1,17 +1,31 @@
 .footer {
   width: 100vw;
   height: 4rem;
-  background: rgb(40, 40, 40);
+  background: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 300;
-  font-size: small;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #333;
+  border-top: 1px solid rgba(0, 123, 255, 0.1);
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .yosi {
-  color: yellow;
+  color: #007bff;
+  font-weight: 600;
   padding: 0 0.5rem;
+  background: linear-gradient(120deg, #007bff, #00a6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #backToTop {
@@ -21,6 +35,15 @@
   z-index: 99;
   width: 50px;
   height: 50px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#backToTop:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .totop {
@@ -31,4 +54,5 @@
   width: 50px;
   height: 50px;
   cursor: pointer;
+  padding: 8px;
 }
