@@ -9,7 +9,6 @@ import gallery04 from "../../asset/gallery04.png";
 import man_studying from "../../asset/man-studying.jpg";
 import possibility from "../../asset/possibility.png";
 import blog_img from "../../asset/blog.webp";
-import takeoff from "../../assets/take-off.webp";
 import womaneating from "../../assets/womaneating.jpg";
 import movieimg from "../../assets/th.jfif";
 import crypto from "../../asset/hero-img.png";

@@ -1,10 +1,9 @@
 import React, { useRef, useState } from "react";
 import "./contact.css";
-import Walmart from "../../asset/walmart.png";
-import Adobe from "../../asset/adobe.png";
-import Microsoft from "../../asset/microsoft.png";
-import Facebook from "../../asset/facebook.png";
+import designxcel from "../../assets/DesignXcel.jpg";
+import cyberbuddy from "../../assets/cyberbuddies.jpg";
 import Facebookicon from "../../asset/facebook-icon.png";
+import digitalents from "../../assets/digitalentshub.png";
 import instagramicon from "../../asset/instagram.png";
 import twittericon from "../../asset/twitter.png";
 import linkedin from "../../asset/linkedin.webp";
@@ -115,40 +114,31 @@ const Contact = () => {
           </p>
           <div className="clientImgs">
             <motion.div
-              className="md:w-full mx-auto py-8 rounded mb-32"
+              className="client-img-container"
               variants={fadeIn("left", 0.3)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.5 }}
             >
-              <img src={Walmart} alt="Clients" className="clientImg" />
+              <img src={designxcel} alt="DesignXcel" className="clientImg" />
             </motion.div>
             <motion.div
-              className="md:w-full mx-auto py-8 rounded mb-32"
+              className="client-img-container"
+              variants={fadeIn("up", 0.3)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.5 }}
+            >
+              <img src={cyberbuddy} alt="CyberBuddy" className="clientImg" />
+            </motion.div>
+            <motion.div
+              className="client-img-container"
               variants={fadeIn("right", 0.3)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.5 }}
             >
-              <img src={Adobe} alt="Clients" className="clientImg" />
-            </motion.div>
-            <motion.div
-              className="md:w-full mx-auto py-8 rounded mb-32"
-              variants={fadeIn("left", 0.3)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.5 }}
-            >
-              <img src={Microsoft} alt="Clients" className="clientImg" />
-            </motion.div>
-            <motion.div
-              className="md:w-full mx-auto py-8 rounded mb-32"
-              variants={fadeIn("right", 0.3)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.5 }}
-            >
-              <img src={Facebook} alt="Clients" className="clientImg" />
+              <img src={digitalents} alt="DigitalEnts" className="clientImg" />
             </motion.div>
           </div>
         </div>
@@ -215,25 +205,39 @@ const Contact = () => {
               </Button>
               <div className="links">
                 <a
-                  href="https://facebook.com/olaniyan.segunnasri"
+                  href="https://www.facebook.com/oluwatoyosi.olaniyan"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <img src={Facebookicon} alt="facebook" className="link" />
                 </a>
-                <a href="https://instagram.com/teecrane_" target="_blank">
+                <a
+                  href="https://www.instagram.com/oluwatoyosi/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src={instagramicon} alt="instagram" className="link" />
                 </a>
-                <a href="https://twitter.com/toyosicrane" target="_blank">
+                <a
+                  href="https://www.twitter.com/oluwatoyosi"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src={twittericon} alt="twitter" className="link" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/segun-olaniyan-93b447308/"
+                  href="https://www.linkedin.com/in/oluwatoyosi-olaniyan/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <img src={linkedin} alt="linkedin" className="link" />
                 </a>
-                <a href="https://github.com/toyorcee" target="_blank">
-                  <img src={git} alt="github" className="github link"/>
+                <a
+                  href="https://github.com/oluwatoyosi"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={git} alt="github" className="github link" />
                 </a>
               </div>
             </Form>

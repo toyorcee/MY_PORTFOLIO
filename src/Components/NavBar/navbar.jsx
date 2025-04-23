@@ -138,13 +138,13 @@ const NavBar = () => {
           <IconButton
             edge="end"
             sx={{
-              display: { xs: "block", md: "none" }, 
-              color: "white", 
-              position: "absolute", 
-              right: "1rem", 
-              top: "50%", 
-              transform: "translateY(-50%)", 
-              zIndex: 10, 
+              display: { xs: "block", md: "none" },
+              color: "white",
+              position: "absolute",
+              right: "1rem",
+              top: "50%",
+              transform: "translateY(-50%)",
+              zIndex: 10,
             }}
             onClick={() => setDrawerOpen(true)}
           >

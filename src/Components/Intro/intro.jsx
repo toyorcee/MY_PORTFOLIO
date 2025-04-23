@@ -21,12 +21,12 @@ const Intro = () => {
             <TypeAnimation
               sequence={[
                 "MERN Full-Stack DEVELOPER",
-                1000, 
-                "Specialized in front-end",
                 1000,
-                "Specialized in back-end",
+                "Front-End Specialist",
                 1000,
-                "I use React & Django.",
+                "Back-End Developer",
+                1000,
+                "Figma to Code Expert",
                 1000,
               ]}
               wrapper="span"
