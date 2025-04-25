@@ -68,6 +68,7 @@ const Works = () => {
               </Card>
             </motion.div>
           </Col>
+
           <Col md={4}>
             <motion.div
               className="md:w-full mx-auto py-8 rounded mb-32"
@@ -97,6 +98,7 @@ const Works = () => {
               </Card>
             </motion.div>
           </Col>
+
           <Col md={4}>
             <motion.div
               className="md:w-full mx-auto py-8 rounded mb-32"

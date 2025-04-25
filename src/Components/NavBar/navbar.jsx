@@ -14,9 +14,11 @@ import { Menu as MenuIcon } from "@mui/icons-material";
 import { Link } from "react-scroll";
 import logo from "../../assets/logo.png";
 import contactImg from "../../assets/contact-icon-png-0.png";
+import "./navbar.css";
 
 const NavBar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState(null);
 
   const menuItems = [
     { label: "Home", to: "intro", offset: -50 },
@@ -25,6 +27,11 @@ const NavBar = () => {
     { label: "Clients", to: "clients", offset: -10 },
     { label: "Contact", to: "contact", offset: -50 },
   ];
+
+  const handleLinkClick = (label) => {
+    setActiveLink(label);
+    setTimeout(() => setActiveLink(null), 500);
+  };
 
   return (
     <AppBar
@@ -84,13 +91,19 @@ const NavBar = () => {
                 smooth={true}
                 offset={item.offset}
                 duration={500}
+                onClick={() => handleLinkClick(item.label)}
+                className={`nav-link ${
+                  activeLink === item.label ? "clicked" : ""
+                }`}
                 style={{
                   cursor: "pointer",
                   textDecoration: "none",
                   color: "black",
+                  position: "relative",
                 }}
               >
                 {item.label}
+                <span className="nav-link-ripple"></span>
               </Link>
             ))}
           </Box>
@@ -104,16 +117,22 @@ const NavBar = () => {
             }}
           >
             <Button
-              onClick={() =>
+              onClick={() => {
                 document
                   .getElementById("contact")
-                  .scrollIntoView({ behavior: "smooth" })
-              }
+                  .scrollIntoView({ behavior: "smooth" });
+                handleLinkClick("contact");
+              }}
+              className={`contact-button ${
+                activeLink === "contact" ? "clicked" : ""
+              }`}
               sx={{
                 backgroundColor: "white",
                 color: "black",
                 borderRadius: "2rem",
                 padding: "0.5rem 1rem",
+                position: "relative",
+                overflow: "hidden",
                 "&:hover": {
                   backgroundColor: "yellow",
                   color: "black",
@@ -131,6 +150,7 @@ const NavBar = () => {
                 }}
               />
               Contact Me
+              <span className="button-ripple"></span>
             </Button>
           </Box>
 
@@ -172,12 +192,20 @@ const NavBar = () => {
             <ListItem
               button
               key={item.label}
-              onClick={() => setDrawerOpen(false)}
+              onClick={() => {
+                setDrawerOpen(false);
+                handleLinkClick(item.label);
+              }}
+              className={`mobile-nav-link ${
+                activeLink === item.label ? "clicked" : ""
+              }`}
               sx={{
                 "&:hover": {
                   backgroundColor: "rgb(240, 240, 240)",
                   color: "yellow",
                 },
+                position: "relative",
+                overflow: "hidden",
               }}
             >
               <Link
@@ -193,6 +221,7 @@ const NavBar = () => {
                 }}
               >
                 <ListItemText primary={item.label} />
+                <span className="mobile-nav-ripple"></span>
               </Link>
             </ListItem>
           ))}

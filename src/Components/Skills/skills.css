@@ -12,40 +12,45 @@
   background-color: white;
 }
 
+.skillsHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
 .skillTitle {
-  font-size: 2.2rem;
-  font-weight: 600;
-  padding-top: 2rem;
-  margin-bottom: 1.5rem;
-  color: black;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
   position: relative;
-  display: inline-block;
-  background: linear-gradient(120deg, #007bff, #00a6ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-transform: capitalize;
+  padding-bottom: 0.5rem;
 }
 
 .skillTitle::after {
   content: "";
   position: absolute;
-  bottom: -8px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 40px;
-  height: 2px;
-  background: linear-gradient(90deg, #007bff, #00a6ff);
-  border-radius: 2px;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff69b4, #ff1493);
+}
+
+.skillDescContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .skillDesc {
   font-size: 1.1rem;
-  font-weight: 400;
-  max-width: 55rem;
-  padding: 0 2rem;
-  margin: 1.5rem 0;
-  color: #333;
-  line-height: 1.8;
+  line-height: 1.6;
+  text-align: center;
+  color: #555;
+  margin: 0 auto;
 }
 
 .h2 {

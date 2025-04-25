@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./footer.css";
 import toTop from "../../assets/deploy1.png";
-import { Link } from "react-scroll";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [showSplash, setShowSplash] = useState(false);
+
+  const scrollToTop = () => {
+    setShowSplash(true);
+
+    // Simple direct scroll
+    window.scrollTo(0, 0);
+
+    setTimeout(() => {
+      setShowSplash(false);
+    }, 500);
+  };
 
   return (
     <footer className="footer">
@@ -12,9 +23,12 @@ const Footer = () => {
         Copyright &#169; {currentYear}
         <span className="yosi">'YOSI.</span> All Rights Reserved
       </div>
-      <Link to="naav" smooth={true} spy={true} duration={700} id="backToTop">
-        <img src={toTop} alt="Back to top" className="totop" />
-      </Link>
+      <div className="back-to-top-container">
+        <button onClick={scrollToTop} id="backToTop">
+          <img src={toTop} alt="Back to top" className="totop" />
+        </button>
+        {showSplash && <div className="splash-effect" />}
+      </div>
     </footer>
   );
 };

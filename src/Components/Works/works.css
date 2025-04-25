@@ -2,11 +2,11 @@
   margin: 0 auto;
   min-height: calc(100vh - 4rem);
   width: 100vw;
-  max-width: 60rem;
+  max-width: 75rem;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 0.5rem;
+  padding: 2rem 1rem;
   background-color: white;
 }
 
@@ -15,6 +15,7 @@
   font-size: 21px;
   font-weight: 600;
   padding: 15px;
+  animation: fadeIn 1s ease-in;
 }
 
 .workstitle {
@@ -24,6 +25,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
+  animation: slideDown 0.8s ease-out;
 }
 
 .workstitle::after {
@@ -36,6 +38,7 @@
   height: 2px;
   background: linear-gradient(90deg, #007bff, #00a6ff);
   border-radius: 2px;
+  animation: expandWidth 0.8s ease-out forwards;
 }
 
 .worksDesc {
@@ -43,6 +46,7 @@
   font-size: 1rem;
   max-width: 45rem;
   color: #333;
+  animation: fadeIn 1s ease-in;
 }
 
 .worksImgs {
@@ -52,15 +56,16 @@
   border-radius: 0.5rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(0, 123, 255, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 .worksImgs:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .worksImgs .card-body {
@@ -68,6 +73,15 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.worksImgs:hover .card-body {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255, 1)
+  );
 }
 
 .worksImgs .card-title {
@@ -75,6 +89,11 @@
   font-weight: 600;
   color: #007bff;
   margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.worksImgs:hover .card-title {
+  color: #0056b3;
 }
 
 .worksImgs .card-text {
@@ -91,12 +110,25 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   height: 4.5rem;
+  transition: height 0.3s ease;
+}
+
+.worksImgs:hover .card-text p {
+  height: 5.5rem;
 }
 
 .worksImgs .tech-stack {
   font-size: 0.85rem;
   color: #666;
   margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.worksImgs:hover .tech-stack {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .worksImg {
@@ -104,6 +136,11 @@
   height: 200px;
   width: 100%;
   border-radius: 0.5rem 0.5rem 0 0;
+  transition: transform 0.5s ease;
+}
+
+.worksImgs:hover .worksImg {
+  transform: scale(1.05);
 }
 
 .workBtn {
@@ -114,15 +151,65 @@
   color: white;
   font-weight: 500;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   margin-top: auto;
   align-self: flex-start;
+  position: relative;
+  overflow: hidden;
 }
 
 .workBtn:hover {
   background: #0056b3;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.workBtn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.workBtn:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40px;
+  }
 }
 
 .food-ordering {
@@ -136,6 +223,7 @@
 @media screen and (max-width: 585px) {
   .worksImgs {
     height: 420px;
+    margin-bottom: 1.5rem;
   }
 
   .worksImg {

@@ -15,9 +15,11 @@ import { fadeIn } from "../../variants.js";
 const Skills = () => {
   return (
     <section id="skills">
-      <h1>
-        <span className="skillTitle">WHAT I DO</span>
-      </h1>
+      <div className="skillsHeader">
+        <h1>
+          <span className="skillTitle">WHAT I DO</span>
+        </h1>
+      </div>
       <motion.div
         className="md:w-full mx-auto py-8 rounded mb-32"
         variants={fadeIn("up", 0.3)}
@@ -25,16 +27,18 @@ const Skills = () => {
         whileInView={"show"}
         viewport={{ once: false, amount: 0.5 }}
       >
-        <span className="skillDesc">
-          I am an innovative and detail-oriented Full Stack Developer with
-          expertise in the MERN stack. I craft high-performance, secure web
-          applications with an emphasis on seamless user experiences and modern
-          UI designs. I excel at implementing Figma designs with precision and
-          setting up robust CI/CD pipelines for scalable, maintainable code. My
-          approach combines technical excellence with a commitment to best
-          security practices, ensuring applications are both powerful and
-          protected.
-        </span>
+        <div className="skillDescContainer">
+          <p className="skillDesc">
+            I am an innovative and detail-oriented Full Stack Developer with
+            expertise in the MERN stack. I craft high-performance, secure web
+            applications with an emphasis on seamless user experiences and
+            modern UI designs. I excel at implementing Figma designs with
+            precision and setting up robust CI/CD pipelines for scalable,
+            maintainable code. My approach combines technical excellence with a
+            commitment to best security practices, ensuring applications are
+            both powerful and protected.
+          </p>
+        </div>
       </motion.div>
       <div className="skillBars">
         <motion.div
@@ -80,7 +84,13 @@ const Skills = () => {
                 implement authentication with Clerk and Firebase, and manage
                 databases including MongoDB, PostgreSQL, MySQL, and Redis. I
                 focus on building scalable architectures that support complex
-                business logic and high transaction volumes.
+                business logic and high transaction volumes. I've implemented
+                advanced MongoDB queries with aggregation pipelines for complex
+                data analysis, including geospatial queries for location-based
+                services and text search capabilities for content discovery.
+                Additionally, I've developed role-based access control systems
+                that manage user permissions at granular levels, ensuring data
+                security while maintaining application flexibility.
               </p>
             </div>
           </div>
@@ -102,7 +112,12 @@ const Skills = () => {
                 like EmailJS, Cloudinary, and payment gateways such as Paystack.
                 I use React Query for optimized data fetching, caching, and
                 background synchronization, significantly improving loading
-                times and overall performance.
+                times and overall performance. I've implemented PDF generation
+                using libraries like jsPDF and react-pdf for creating
+                professional reports, invoices, and payslips. These PDF
+                documents include dynamic data, tables, charts, and proper
+                formatting to ensure they meet business requirements and provide
+                a professional presentation of information.
               </p>
             </div>
           </div>
@@ -190,7 +205,10 @@ const Skills = () => {
                 JWT, and Clerk for secure user management and protect
                 applications from common vulnerabilities. I've implemented
                 role-based access control systems with multiple user roles to
-                ensure data security and privacy.
+                ensure data security and privacy. These systems include
+                hierarchical permissions, dynamic access rules, and audit
+                logging to track user actions and maintain compliance with
+                security standards.
               </p>
             </div>
           </div>
