@@ -8,7 +8,7 @@ import ecomm from "../../asset/ecomm.webp";
 import gallery04 from "../../asset/gallery04.png";
 import man_studying from "../../asset/man-studying.jpg";
 import possibility from "../../asset/possibility.png";
-import blog_img from "../../asset/blog.webp";
+import pms_img from "../../assets/hr.jpg";
 import womaneating from "../../assets/womaneating.jpg";
 import movieimg from "../../assets/th.jfif";
 import crypto from "../../asset/hero-img.png";
@@ -78,20 +78,20 @@ const Works = () => {
               viewport={{ once: false, amount: 0.5 }}
             >
               <Card className="worksImgs">
-                <Card.Img src={blog_img} className="worksImg" />
+                <Card.Img src={pms_img} className="worksImg" />
                 <Card.Body>
-                  <Card.Title>Yosi's Blog</Card.Title>
+                  <Card.Title>PMS</Card.Title>
                   <Card.Text>
                     <p>
-                      A full-stack blog platform with user authentication, rich
-                      text editing, and dynamic content management using the
-                      MERN stack.
+                      Payroll Management System for efficient employee salary
+                      processing, tax calculations, and payment tracking. Built
+                      with Next.js for seamless performance and scalability
                     </p>
                     <div className="tech-stack">
-                      Tech: MongoDB, Express.js, React, Node.js
+                      Tech: Nextjs, Clerk, MongoDB, Express.js, React, Node.js
                     </div>
                   </Card.Text>
-                  <a href="https://yosisblog.onrender.com/" target="blank_">
+                  <a href="https://payroll-ms.vercel.app/" target="blank_">
                     <Button className="workBtn">More Details</Button>
                   </a>
                 </Card.Body>
